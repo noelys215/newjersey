@@ -39,7 +39,7 @@ export const HomePage = () => {
 
 			<ButtonContainer title={'State History | Attractions | Resources'}>
 				<Button onClick={() => navigate('/state-history')}>State History</Button>
-				<Button>Attractions</Button>
+				<Button onClick={() => navigate('/attractions')}>Attractions</Button>
 				<Button>Resource Link</Button>
 			</ButtonContainer>
 			{/* State Into & News Updates */}
