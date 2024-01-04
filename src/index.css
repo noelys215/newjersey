@@ -275,3 +275,46 @@ h1 {
 	font-size: 3.5em;
 	line-height: 1.1;
 }
+
+/* TODO NEW */
+
+.section-block {
+	/* Styles for SectionBlock */
+	width: 900px;
+	border: solid black;
+	padding: 0 1rem;
+	background-color: #fdfcfc;
+}
+
+.aside-block {
+	/* Styles for AsideBlock */
+	width: 300px;
+	border: solid black;
+	padding: 0 1rem;
+	background-color: #fdfcfc;
+}
+
+.section-block h2,
+.aside-block h2 {
+	text-decoration: underline;
+}
+
+.block-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 1rem;
+	row-gap: 1rem;
+	margin: 1rem;
+}
+
+@media (max-width: 768px) {
+	.section-block,
+	.aside-block {
+		width: 100%;
+	}
+
+	.block-container {
+		margin: 1rem 0;
+	}
+}
