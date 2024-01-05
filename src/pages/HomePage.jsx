@@ -37,10 +37,9 @@ export const HomePage = () => {
 				<Button onClick={() => navigate('/atlantic-city')}>Atlantic City</Button>
 			</ButtonContainer>
 
-			<ButtonContainer title={'State History | Attractions | Resources'}>
+			<ButtonContainer title={'State History | Attractions'}>
 				<Button onClick={() => navigate('/state-history')}>State History</Button>
 				<Button onClick={() => navigate('/attractions')}>Attractions</Button>
-				<Button>Resource Link</Button>
 			</ButtonContainer>
 			{/* State Into & News Updates */}
 			<BlockContainer>
@@ -49,8 +48,13 @@ export const HomePage = () => {
 					text={
 						"     Welcome to the lush New Jerseys’ home site, your gateway to exploring the Garden State's hidden wonders and bustling cities! Whether you're planning a visit, seeking adventure, or just curious about what New Jersey has to offer, you've come to the right place. Browse through our site to discover each city's unique charm, from the historic streets of Princeton to the lively boardwalks of Atlantic City. And if you have any questions or need further information, don't hesitate to reach out using our user-friendly contact form."
 					}
+					source={'https://en.wikipedia.org/wiki/New_Jersey'}
 				/>
-				<AsideBlock title={'News & Updates'} text={returnedNewsList} />
+				<AsideBlock
+					title={'News & Updates'}
+					text={returnedNewsList}
+					source={'https://www.nj.gov/'}
+				/>
 			</BlockContainer>
 			{/* State Highlights & Upcoming Events */}
 			<BlockContainer>
@@ -59,8 +63,13 @@ export const HomePage = () => {
 					text={
 						"Explore New Jersey's highlights, where the charm of quaint small towns meets the energy of bustling cities. Delve into our world-class museums, indulge in our famous diners, and unwind on our picturesque beaches. New Jersey, a state rich in historical landmarks and natural beauty, promises an unforgettable journey through its unique heritage and landscapes."
 					}
+					source={'https://en.wikipedia.org/wiki/New_Jersey'}
 				/>
-				<AsideBlock title={'Upcoming Events'} text={returnedUpdatesList} />
+				<AsideBlock
+					title={'Upcoming Events'}
+					text={returnedUpdatesList}
+					source={'https://www.nj.gov/'}
+				/>
 			</BlockContainer>
 
 			<Image src={'src/assets/jerseyShore.jpg'} alt={'Jersey Shore Image'} />

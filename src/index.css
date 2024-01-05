@@ -32,12 +32,14 @@ nav {
 	border-bottom: solid #333;
 }
 
-.logo {
+.logo,
+.logo a {
 	color: #f9f6ee;
 	font-size: 20px;
 	font-weight: bold;
 	font-style: italic;
 	font-family: 'Playfair Display', serif;
+	text-decoration: none;
 }
 
 .nav-links {
@@ -179,26 +181,7 @@ footer {
 	margin: 1rem;
 }
 
-/* Form */
-.form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
-}
-
-.form input,
-.form textarea {
-	width: 80%;
-	padding: 1rem;
-	border: 1px solid #f9f6ee;
-	border-radius: 4px;
-}
-
-.form textarea {
-	height: 200px;
-	resize: none;
-}
+/* Form 2 */
 
 .form-page {
 	display: flex;
@@ -206,17 +189,56 @@ footer {
 	justify-content: center;
 	align-items: center;
 	min-height: 500px;
-	width: 500px;
+	max-width: 700px;
 	margin: auto;
 	border: solid #333;
 	border-radius: 15px;
 	padding: 1rem;
 }
 
-.form h2 {
-	text-align: center;
-	color: #333;
-	margin-bottom: 20px;
+.form-container {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	position: relative; /* Relative positioning */
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+label,
+input,
+textarea {
+	display: block;
+	width: 96%;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+	padding: 8px;
+	margin-top: 5px;
+}
+
+textarea {
+	height: 200px;
+	width: 96%;
+	resize: none;
+}
+
+button {
+	float: right; /* Float property */
+	padding: 10px 20px;
+	margin-top: 10px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #45a049;
 }
 
 /* Blocks */
@@ -287,6 +309,37 @@ footer {
 	height: 10px;
 	border-radius: 50%;
 	background: #333;
+}
+
+/* Aside Table */
+
+.aside-table-block {
+	width: 300px;
+	border: solid black;
+	padding: 1rem;
+	background-color: #f9f9f9;
+}
+
+.aside-table-block h2 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.aside-table-block table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.aside-table-block th,
+.aside-table-block td {
+	border: 1px solid #ccc;
+	padding: 5px;
+	padding-bottom: 1rem;
+}
+
+.aside-table-block th {
+	background-color: #eee;
 }
 
 /* Media Queries */

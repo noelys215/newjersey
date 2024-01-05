@@ -5,10 +5,15 @@ import { Image } from '../../components/Image';
 import { Layout } from '../../components/Layout';
 import { useNavigate } from 'react-router-dom';
 import { SectionBlock } from '../../components/SectionBlock';
-import { AsideBlock } from '../../components/AsideBlock';
 import { ImageBlock } from '../../components/ImageBlock';
+import { AsideTableBlock, EconomyAsideTableBlock } from '../../components/AsideTableBlock';
 
 export const Princeton = () => {
+	const regionData = [
+		{ county: 'Mercer', zipCode: '08544', regionType: 'Town', landArea: '17.9 mi²' },
+	];
+	const economyData = [{ population: '30,586', year: '1813', income: '$257,390' }];
+
 	const navigate = useNavigate();
 	return (
 		<Layout title={'Princeton'}>
@@ -22,21 +27,13 @@ export const Princeton = () => {
 				<SectionBlock
 					title={'City Introduction'}
 					text={
-						"     Princeton, New Jersey, with its unique blend of historical charm and modern suburban flair, was established on January 1, 2013, from the merging of the Borough of Princeton and Princeton Township. But its roots run much deeper, dating back to before the American Revolutionary War. \n     The name 'Princeton' itself emerged in 1724, possibly as a nod to Prince William of Orange or a local landowner named Henry Prince. \n     Located in Mercer County, Princeton sits equidistantly between New York City and Philadelphia, offering a suburban environment enriched with urban characteristics. It's a community where history is nestled amidst leafy suburban streets and vibrant academic life."
+						"     Princeton, New Jersey, is a renowned municipality in Mercer County, known for its rich educational and cultural heritage. Established on January 1, 2013, through the consolidation of the Borough of Princeton and Princeton Township, the city has a deep historical significance and a strong academic presence. Princeton's development has been closely tied to its position between New York City and Philadelphia, making it a vital cultural and intellectual hub in the region. The city's population, as of the 2020 census, stands at around 30,681, reflecting its status as a vibrant community with a mix of suburban and academic lifestyles."
 					}
 					source={'https://en.wikipedia.org/wiki/Princeton,_New_Jersey'}
 				/>
 
-				<AsideBlock
-					title={'Economy & Population'}
-					text={
-						<ul>
-							<li>Average Earning</li>
-							<li>Rate of Home Ownership</li>
-							<li>Growth Rate</li>
-							<li>Demographic</li>
-						</ul>
-					}
+				<EconomyAsideTableBlock
+					data={economyData}
 					source={'https://worldpopulationreview.com/us-cities/princeton-nj-population'}
 				/>
 			</BlockContainer>
@@ -46,19 +43,13 @@ export const Princeton = () => {
 				<SectionBlock
 					title={'Culture & History'}
 					text={
-						"     As of 2024, Princeton is home to around 30,681 residents, reflecting its status as a notable yet intimate community. The city stands out in New Jersey for its higher average income levels. \n     With average earnings of about $88,699, and a notable difference in earnings between genders (men earning around $120,677 and women about $65,244), Princeton's economy mirrors its status as an affluent, education-oriented community. \n     This economic profile is significantly higher compared to many other parts of New Jersey, underscoring the city's blend of academic influence and suburban affluence."
+						"     Princeton's history is steeped in academic and revolutionary significance. The area, initially settled by Quakers in 1696, was originally known as Stony Brook. It was later renamed to honor William III of England. The city's cultural landscape was profoundly shaped by the relocation of the College of New Jersey, now Princeton University, in 1756 from Newark. The presence of this prestigious Ivy League institution, along with other educational entities like the Institute for Advanced Study, has fostered a vibrant intellectual environment. Princeton's historical relevance is also marked by events like the Battle of Princeton during the American Revolution, which saw a crucial victory by General George Washington's troops."
 					}
+					source={'https://www.britannica.com/place/Princeton-New-Jersey'}
 				/>
-				<AsideBlock
-					title={'Region Makeup'}
-					text={
-						<ul>
-							<li>County</li>
-							<li>Zip Code</li>
-							<li>Area Code</li>
-							<li>Land Area</li>
-						</ul>
-					}
+				<AsideTableBlock
+					data={regionData}
+					source={'https://worldpopulationreview.com/us-cities/trenton-nj-population'}
 				/>
 			</BlockContainer>
 
@@ -70,8 +61,9 @@ export const Princeton = () => {
 				<SectionBlock
 					title={'Notable Attraction'}
 					text={
-						"     Princeton's identity is deeply intertwined with its arts and cultural scene, largely influenced by the presence of Princeton University. This prestigious institution not only shapes the town's academic landscape but also infuses it with cultural vibrancy through various public events, exhibitions, and lectures. \n     Beyond the university, Princeton offers a wealth of cultural experiences, including museums, theaters, and historical landmarks. These venues and events celebrate the town's rich history and dedication to the arts, making Princeton a magnet for those seeking a blend of historical exploration and contemporary cultural engagement."
+						"     One of Princeton's most notable attractions is Princeton University, a world-renowned Ivy League institution. Established in 1746, it is the fourth oldest institution of higher education in the United States. The university's campus is a blend of historic and modern architecture, with notable buildings like Nassau Hall, which briefly served as the U.S. Capitol in 1783. The campus also houses the prestigious Institute for Advanced Study, where Albert Einstein spent his final years. The university not only contributes significantly to the city's academic atmosphere but also adds to its architectural beauty and historical richness."
 					}
+					source={'https://en.wikipedia.org/wiki/Princeton,_New_Jersey'}
 				/>
 			</BlockContainer>
 			<Image src={'src/assets/princetonUni.jpg'} alt={'Princeton University'} />

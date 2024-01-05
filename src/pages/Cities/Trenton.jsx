@@ -5,11 +5,15 @@ import { Image } from '../../components/Image';
 import { Layout } from '../../components/Layout';
 import { useNavigate } from 'react-router-dom';
 import { SectionBlock } from '../../components/SectionBlock';
-import { AsideBlock } from '../../components/AsideBlock';
 import { ImageBlock } from '../../components/ImageBlock';
+import { AsideTableBlock, EconomyAsideTableBlock } from '../../components/AsideTableBlock';
 
 export const Trenton = () => {
 	const navigate = useNavigate();
+	const regionData = [
+		{ county: 'Mercer', zipCode: '08608', regionType: 'City', landArea: '7.58 mi²' },
+	];
+	const economyData = [{ population: '89,844', year: '1972', income: '$66,002' }];
 	return (
 		<Layout title={'Trenton'}>
 			<ButtonContainer>
@@ -17,26 +21,19 @@ export const Trenton = () => {
 				<Button onClick={() => navigate('/princeton')}>Princeton</Button>
 				<Button onClick={() => navigate('/atlantic-city')}>Atlantic City</Button>
 			</ButtonContainer>
-			{/* City Intro Section & Economy/Pop Aside */}
+			{/* City Intro Section & Demo Aside */}
 			<BlockContainer>
 				<SectionBlock
 					title={'City Introduction'}
 					text={
-						"     Trenton, New Jersey's capital city, has a rich tapestry of history dating back to its founding in 1719. Initially part of Hunterdon County, it was later named after William Trent, one of its leading landholders. \n     The city, located in Mercer County, is predominantly urban and serves as a crucial hub in the central region of the state. \n     Trenton became New Jersey's capital in 1790 and was even briefly the national capital in 1784. This city, steeped in history, is a melting pot of cultures and epochs, making it a unique and vibrant community​."
+						"     Trenton, the capital city of New Jersey, is an industrial hub rich in history. Located at the head of navigation on the Delaware River, Trenton lies strategically between Philadelphia and New York City. Founded in 1679 by Quakers, it was later named after Philadelphia merchant William Trent in 1719. The city has played a crucial role in American history, notably during the Revolutionary War when General George Washington's army famously crossed the Delaware River. Trenton became New Jersey's capital in 1790, flourishing as an industrial center and transportation hub."
 					}
-					source={'https://en.wikipedia.org/wiki/Princeton,_New_Jersey'}
+					source={'https://www.britannica.com/place/Trenton-New-Jersey'}
 				/>
 
-				<AsideBlock
-					title={'Economy & Population'}
-					text={
-						<ul>
-							<li>Average Earning</li>
-							<li>Rate of Home Ownership</li>
-							<li>Growth Rate</li>
-							<li>Demographic</li>
-						</ul>
-					}
+				<EconomyAsideTableBlock
+					data={economyData}
+					source={'https://worldpopulationreview.com/us-cities/trenton-nj-population'}
 				/>
 			</BlockContainer>
 
@@ -44,36 +41,31 @@ export const Trenton = () => {
 			<BlockContainer>
 				<SectionBlock
 					title={'Culture & History'}
-					text={
-						"     As of 2024, Trenton's population is approximately 89,844, reflecting its status as a significant urban center in New Jersey. The city's economy is diverse, yet it faces the typical challenges of urban areas. \n     The median income levels in Trenton are generally lower compared to other parts of the state, indicative of the varied economic landscape that characterizes many state capitals. \n     This economic profile is an integral part of Trenton's identity, representing a wide spectrum of opportunities and challenges within the urban setting."
-					}
+					text={`     Trenton's history is deeply intertwined with America's industrial and revolutionary past. The city's strategic location on the Delaware River contributed to its significant role in the industrialization of the Greater Philadelphia region. Trenton's slogan, 'Trenton Makes, the World Takes,' coined in 1917, reflects its industrial prowess. The city was a manufacturing powerhouse, producing textiles, steel, rubber, and pottery. Trenton's diverse population grew alongside its industries, with a rich mix of immigrants contributing to its cultural fabric. The city has also been central to key historical events, including pivotal battles during the American Revolution.`}
+					source={'https://en.wikipedia.org/wiki/Trenton,_New_Jersey'}
 				/>
-				<AsideBlock
-					title={'Region Makeup'}
-					text={
-						<ul>
-							<li>County</li>
-							<li>Zip Code</li>
-							<li>Area Code</li>
-							<li>Land Area</li>
-						</ul>
-					}
+				<AsideTableBlock
+					data={regionData}
+					source={'https://worldpopulationreview.com/us-cities/trenton-nj-population'}
 				/>
 			</BlockContainer>
 
 			{/* Notable Attraction */}
 			<BlockContainer>
 				<ImageBlock>
-					<img src={'src/assets/patriots.jpeg'} />
+					<img src={'src/assets/stateHouse.jpeg'} alt="Trenton State House" />
 				</ImageBlock>
 				<SectionBlock
 					title={'Notable Attraction'}
 					text={
-						"     As of 2024, Trenton's population is approximately 89,844, reflecting its status as a significant urban center in New Jersey. The city's economy is diverse, yet it faces the typical challenges of urban areas. \n     The median income levels in Trenton are generally lower compared to other parts of the state, indicative of the varied economic landscape that characterizes many state capitals. \n     This economic profile is an integral part of Trenton's identity, representing a wide spectrum of opportunities and challenges within the urban setting."
+						"     The New Jersey State House in Trenton is a notable attraction. As the seat of the state's government, this historic building symbolizes Trenton's political significance. Constructed in 1792, it has undergone several renovations and expansions, reflecting various architectural styles. The State House is not only a center of political activity but also a repository of the state's history, offering guided tours that delve into New Jersey's legislative process and its rich past. This landmark is a testament to Trenton's enduring role in both state and national history."
+					}
+					source={
+						"https://www.journeythroughjersey.com/sites/new-jersey-state-house/#:~:text=Visitors%20can%20explore%20the%20building's,role%20in%20shaping%20public%20policy."
 					}
 				/>
 			</BlockContainer>
-			<Image src={'src/assets/stateHouse.jpeg'} alt={'Trenton State House'} />
+			<Image src={'src/assets/trentonMakes.jpeg'} alt={'Trenton Makes Bridge'} />
 		</Layout>
 	);
 };
