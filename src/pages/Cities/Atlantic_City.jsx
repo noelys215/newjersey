@@ -61,7 +61,7 @@ export const Atlantic_City = () => {
 			{/* Notable Attraction */}
 			<BlockContainer>
 				<ImageBlock>
-					<img src={'src/assets/hardRock.webp'} />
+					<img src={'src/assets/hardRock.webp'} alt="Hard Rock Cafe" />
 				</ImageBlock>
 				<SectionBlock
 					title={'Notable Attraction'}

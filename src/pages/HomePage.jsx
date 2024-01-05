@@ -37,10 +37,6 @@ export const HomePage = () => {
 				<Button onClick={() => navigate('/atlantic-city')}>Atlantic City</Button>
 			</ButtonContainer>
 
-			<ButtonContainer title={'State History | Attractions'}>
-				<Button onClick={() => navigate('/state-history')}>State History</Button>
-				<Button onClick={() => navigate('/attractions')}>Attractions</Button>
-			</ButtonContainer>
 			{/* State Into & News Updates */}
 			<BlockContainer>
 				<SectionBlock
@@ -72,7 +68,7 @@ export const HomePage = () => {
 				/>
 			</BlockContainer>
 
-			<Image src={'src/assets/jerseyShore.jpg'} alt={'Jersey Shore Image'} />
+			<Image src={'src/assets/jerseyShore.jpg'} alt={'Jersey Shore Lighthouse'} />
 		</Layout>
 	);
 };

@@ -56,7 +56,10 @@ export const Princeton = () => {
 			{/* Notable Attraction */}
 			<BlockContainer>
 				<ImageBlock>
-					<img src={'src/assets/princetonBuilding.jpg'} />
+					<img
+						src={'src/assets/princetonBuilding.jpg'}
+						alt="Princeton University Building"
+					/>
 				</ImageBlock>
 				<SectionBlock
 					title={'Notable Attraction'}
@@ -66,7 +69,7 @@ export const Princeton = () => {
 					source={'https://en.wikipedia.org/wiki/Princeton,_New_Jersey'}
 				/>
 			</BlockContainer>
-			<Image src={'src/assets/princetonUni.jpg'} alt={'Princeton University'} />
+			<Image src={'src/assets/princetonUni.jpg'} alt={'Princeton University Building'} />
 		</Layout>
 	);
 };

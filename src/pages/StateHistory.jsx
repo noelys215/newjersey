@@ -71,7 +71,7 @@ export const StateHistory = () => {
 				</AsideBlock>
 			</BlockContainer>
 
-			<Image src={'src/assets/princetonWilderness.jpg'} alt={'Jersey Shore Image'} />
+			<Image src={'src/assets/princetonWilderness.jpg'} alt={'Princeton Wilderness'} />
 		</Layout>
 	);
 };

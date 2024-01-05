@@ -23,6 +23,7 @@ h2 {
 }
 
 /* Navigation */
+
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -64,6 +65,7 @@ nav {
 }
 
 /* Header, Main, Footer */
+
 header {
 	background-color: #f9f6ee;
 	padding: 20px;
@@ -200,7 +202,7 @@ footer {
 	width: 100%;
 	max-width: 600px;
 	margin: auto;
-	position: relative; /* Relative positioning */
+	position: relative;
 }
 
 .form-group {
@@ -228,7 +230,7 @@ textarea {
 }
 
 button {
-	float: right; /* Float property */
+	float: right;
 	padding: 10px 20px;
 	margin-top: 10px;
 	background-color: #4caf50;
@@ -342,6 +344,46 @@ button:hover {
 	background-color: #eee;
 }
 
+/* Mobile Nav */
+.hamburger {
+	cursor: pointer;
+	font-size: 24px;
+	user-select: none;
+	color: #f9f9f9;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #3d4328;
+	opacity: 97%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	z-index: 1;
+}
+
+.mobile-nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+.mobile-nav li {
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+.mobile-nav a {
+	text-decoration: none;
+	color: white;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
 	.section-block,
@@ -360,5 +402,17 @@ button:hover {
 
 	.button-container button {
 		width: 50%;
+	}
+
+	.nav-links {
+		display: none;
+	}
+}
+/* Hide Mobile Nav on Desktop */
+
+@media (min-width: 768px) {
+	.hamburger,
+	.mobile-nav {
+		display: none;
 	}
 }

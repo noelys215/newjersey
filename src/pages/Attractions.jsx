@@ -13,7 +13,7 @@ export const Attractions = () => {
 			{/* Notable Attraction */}
 			<BlockContainer>
 				<ImageBlock>
-					<img src={'src/assets/stateBeach.jpeg'} />
+					<img src={'src/assets/stateBeach.jpeg'} alt="Island Beach State Park" />
 				</ImageBlock>
 				<SectionBlock
 					title={'Island Beach State Park'}
@@ -35,13 +35,13 @@ export const Attractions = () => {
 					}
 				/>
 				<ImageBlock>
-					<img src={'src/assets/sixFlags.avif'} />
+					<img src={'src/assets/sixFlags.avif'} alt="Six Flags Great Adventure" />
 				</ImageBlock>
 			</BlockContainer>
 
 			<BlockContainer>
 				<ImageBlock>
-					<img src={'src/assets/adventure.jpeg'} />
+					<img src={'src/assets/adventure.jpeg'} alt="Adventure Aquarium" />
 				</ImageBlock>
 				<SectionBlock
 					title={'Adventure Aquarium'}
@@ -63,7 +63,10 @@ export const Attractions = () => {
 					source={'https://www.attractionsofamerica.com/attractions/newjersey.php#324'}
 				/>
 				<ImageBlock>
-					<img src={'src/assets/edisonPark.jpeg'} />
+					<img
+						src={'src/assets/edisonPark.jpeg'}
+						alt="Thomas Edison National Historical Park"
+					/>
 				</ImageBlock>
 			</BlockContainer>
 
@@ -77,7 +80,7 @@ export const Attractions = () => {
 				/>
 			</BlockContainer>
 
-			<Image src={'src/assets/rusty.jpeg'} alt={'Trenton State House'} />
+			<Image src={'src/assets/rusty.jpeg'} alt={'Big Rusty'} />
 		</Layout>
 	);
 };
